@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Manager</h1>
+
+        <!-- Image Upload Section -->
+        <section class="section">
+            <h2>Upload Product Image</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="imageInput" name="image" accept="image/*" required>
+                <button type="submit">Upload Image</button>
+            </form>
+            <div id="uploadStatus" class="status-message"></div>
+            <div id="productDetails" class="product-details"></div>
+        </section>
+
+        <!-- Get Product by ID Section -->
+        <section class="section">
+            <h2>Get Product by ID</h2>
+            <form id="getProductForm">
+                <input type="number" id="productId" placeholder="Enter Product ID" required>
+                <button type="submit">Get Product</button>
+            </form>
+            <div id="productDetailsById" class="product-details"></div>
+        </section>
+
+        <!-- Update Product Section -->
+        <section class="section">
+            <h2>Update Product</h2>
+            <form id="updateProductForm">
+                <input type="number" id="productIdToUpdate" placeholder="Product ID" required>
+                <input type="text" id="newProductName" placeholder="New Product Name">
+                <input type="text" id="newPrice" placeholder="New Price">
+                <textarea id="newFeatures" placeholder="New Features (comma separated)"></textarea>
+                <button type="submit">Update Product</button>
+            </form>
+            <div id="updateStatus" class="status-message"></div>
+        </section>
+
+        <!-- Delete Product Section -->
+        <section class="section">
+            <h2>Delete Product</h2>
+            <form id="deleteProductForm">
+                <input type="number" id="productIdToDelete" placeholder="Product ID" required>
+                <button type="submit">Delete Product</button>
+            </form>
+            <div id="deleteStatus" class="status-message"></div>
+        </section>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
